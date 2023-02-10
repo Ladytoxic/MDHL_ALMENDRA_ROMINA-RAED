@@ -6,14 +6,11 @@
     letter-spacing: 1px;
 }
 
-
-
 main,
 header {
     min-width: 900px;
     position: relative;
 }
-
 
 header {
     width: 100%;
@@ -44,7 +41,6 @@ main img {
     top: -20px;
     background-color: white;
     z-index: 10;
-    border: 2px solid cornsilk;
 }
 
 nav,
