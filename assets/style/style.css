@@ -8,13 +8,23 @@
 
 }
 
+:root {
+    --amarrilo-color: #fdcb24;
+    --marron-color: #28150e;
+    --turquesa-color: #3fc0a0;
+    --rojo-color: #f10e07;
+    --negro-color: rgba(0, 0, 0, 0.95);
+    --bg-cajas-color: #e9e9e9;
+
+}
+
 body {
     min-height: 100vh;
 }
 
 main {
     min-height: 70vh;
-    background-color: rgb(248 225 46);
+    background-color: var(--amarrilo-color);
 
 }
 
@@ -40,20 +50,23 @@ header img {
 /* Titulo */
 h1 {
     position: absolute;
-    color: white;
-    text-transform: uppercase;
-    text-shadow: 1px 2px 2px black;
     padding: 1rem;
     z-index: 2;
+    color: var(--amarrilo-color);
+    font-size: 3.5rem;
+    -webkit-text-stroke: 2px var(--rojo-color);
+    text-shadow: -4px 1px 1px var(--turquesa-color);
+    text-transform: uppercase;
+    letter-spacing: -2px
 }
 
 /* Titulo de la pagina */
 main h2 {
-    background-color: black;
+    background-color: var(--negro-color);
     width: 100%;
-    color: white;
+    color: var(--bg-cajas-color);
     text-align: center;
-    padding: .5rem 0 .5rem 0;
+    padding: .5rem 0;
     margin-bottom: 2rem;
 
 }
@@ -64,11 +77,8 @@ main img {
     height: 7.5rem;
     object-fit: contain;
     position: absolute;
-    right: 3.3rem;
-    top: -2.1rem;
-    background-color: white;
-    border-radius: 1rem;
-    box-shadow: 2px 2px 2px black;
+    right: 3rem;
+    top: -4.5rem;
     z-index: 10;
 }
 
@@ -83,17 +93,16 @@ div {
     width: 100%;
     vertical-align: top;
     padding: 1rem;
-
 }
 
 section,
 .contact {
     flex-grow: 1;
     border-radius: 1rem;
-    background-color: white;
+    background-color: var(--bg-cajas-color);
     margin-right: 1rem;
-    box-shadow: 1px 2px 3px;
-    border: 1px solid black;
+    box-shadow: 1px 2px 3px var(--marron-color);
+    border: 1px solid var(--negro-color);
 }
 
 nav {
@@ -104,21 +113,24 @@ nav a {
     display: block;
     padding: 1rem;
     margin-bottom: 1rem;
-    text-decoration: none;
     border-radius: 1rem;
-    border: 1px solid black;
-    box-shadow: -1px -2px 2px black;
+    color: var(--bg-cajas-color);
+    background-color: var(--turquesa-color);
+    border: 1px solid var(--negro-color);
+    box-shadow: -1px -2px 2px var(--marron-color);
+    text-decoration: none;
     transition: all 0.3s;
     text-align: center;
+    font-weight: 600;
 }
 
 nav a[href="#"] {
     transform: scale(1);
     font-weight: 600;
-    border: 1px solid white;
+    border: 1px solid var(--bg-cajas-color);
     box-shadow: none;
-    background-color: black;
-    color: white;
+    background-color: var(--negro-color);
+    color: var(--bg-cajas-color);
 }
 
 section p {
@@ -128,8 +140,8 @@ section p {
 
 a:hover {
     transform: scale(1.1);
-    background-color: white;
-    color:black;
+    background-color: var(--bg-cajas-color);
+    color: var(--negro-color);
 }
 
 .rules {
@@ -141,37 +153,52 @@ article {
     text-align: start;
 }
 
-article>h4 {
+article>h4,
+strong,
+dt {
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
-ul {
-    padding-left: 1.2rem;
-}
 
 li {
     margin: 1rem 0rem;
-    list-style: decimal;
+    list-style-position: inside;
 }
 
 article>p {
     text-indent: 2rem;
-}
-
-li>h4 {
-    display: inline-block;
+    margin-bottom: 2rem;
 }
 
 .age_groups li {
     margin: 0rem;
     list-style: lower-alpha;
+    list-style-position: inside;
 }
 
-.all-play {
+.all-play,
+ul {
     padding-left: 1.2rem;
 }
 
 .all-play li {
     margin: 0rem;
     list-style: circle;
+}
+
+.game h3 {
+    margin-bottom: 1rem;
+}
+table {
+    margin: 1rem 0rem;
+}
+
+th {
+    text-align: start;
+}
+
+td {
+    padding-right: 1rem;
+    padding-bottom: 1rem;
 }
