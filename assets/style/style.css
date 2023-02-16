@@ -4,8 +4,6 @@
     box-sizing: border-box;
     font-family: sans-serif;
     letter-spacing: 1px;
-    /* outline: 1px rgb(255, 0, 0) solid; */
-
 }
 
 :root {
@@ -67,7 +65,7 @@ main h2 {
     color: var(--bg-cajas-color);
     text-align: center;
     padding: .5rem 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
 }
 
@@ -125,7 +123,7 @@ nav a {
 }
 
 nav a[href="#"] {
-    transform: scale(1);
+    pointer-events: none;
     font-weight: 600;
     border: 1px solid var(--bg-cajas-color);
     box-shadow: none;
@@ -138,8 +136,8 @@ section p {
     text-indent: 1rem;
 }
 
-a:hover {
-    transform: scale(1.1);
+a:hover,
+input[type="submit"]:hover {
     background-color: var(--bg-cajas-color);
     color: var(--negro-color);
 }
@@ -218,4 +216,104 @@ footer {
     width: 100%;
     height: 4rem;
     text-align: center;
+}
+
+.info-player {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+fieldset {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+legend {
+    font-size: 1.05rem;
+    font-weight: 600;
+    display: block;
+}
+
+label {
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+input {
+    padding: 0 0.5rem;
+    border: none;
+    border-bottom: 2px solid var(--marron-color);
+    background: none;
+    font-size: 1.05rem;
+}
+
+
+input[type="text"] {
+    width: 16rem;
+
+}
+
+input[type="number"] {
+    width: 10rem;
+}
+
+
+input[type="submit"] {
+    cursor: pointer;
+    width: 10rem;
+    margin: 1rem;
+    padding: 1rem;
+    color: var(--bg-cajas-color);
+    background-color: var(--turquesa-color);
+    border: 1px solid var(--negro-color);
+    box-shadow: 1px 2px 2px var(--marron-color);
+    border-radius: 1rem;
+    transition: all 0.3s;
+    text-align: center;
+    font-weight: 600;
+}
+
+form h4 {
+    margin: 1rem 0rem;
+}
+
+.maps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.maps h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.map {
+    width: 300px;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 2px var(--marron-color);
+    border: 1px solid var(--negro-color);
+}
+
+iframe {
+    margin: 0.5rem;
+    width: 250px;
+    height: 250px;
+    border: none;
+    border-radius: 1rem;
+}
+
+.map h4 {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--marron-color);
+    color: var(--bg-cajas-color);
+    z-index: 20;
 }
